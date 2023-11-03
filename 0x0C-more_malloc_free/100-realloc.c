@@ -3,50 +3,49 @@
 #include <stdlib.h>
 
 /**
- * simple_print_buffer - to print buffer in hexa
- * @buffer: the address memory being printed
- * @size: size of the memory to print
+ * _realloc -  allocation a memory using mem block
+ * @ptr: ks ks
+ * @old_size: ks ks
+ * @new_size: ks ks
  *
- * Return: Nothing
+ * Return: ksl
  */
-void simple_print_buffer(char *buffer, unsigned int size)
+
+void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
+	char *nptr;
 	unsigned int i;
 
-	i = 0;
-	while (i < size)
-	{
-		if (i % 10)
-		{
-			printf(" ");
-		}
-		if (!(i % 10) && i)
-		{
-			printf("\n");
-		}
-		printf("0*%)2*", buffer[i]);
-		i++;
-	}
-	printf("\n");
-}
-/**
- * main - check the given code
- *
- * Return: Alwways return 0
- */
-int main(void)
-{
-	char *p;
-	int i;
+	if (new_size == old_size)
+		return(ptr)'
 
-	p = malloc(sizeof(char) * 10);
-	p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
-	i = 0;
-	while (i < 98)
+	if (ptr == NULL)
 	{
-		p[i++] = 98;
+		nptr = malloc(new_size);
+
+		if (nptr == NULL)
+			return (NULL);
+
+		return (nptr);
 	}
-	simple_print_buffer(p, 98);
-	free(p);
-	return (0);
+	else
+	{
+			if (new_size == 0)
+			{
+				free(ptr);
+				return (NULL);
+			}
+	}
+
+	nptr = malloc(new_size);
+
+	if (nptr == NULL)
+		return (NULL)
+	for (i = 0; i < old_size && i <new_sie; i++)
+	{
+		nptr(i) = ((Char *) ptr)[i];
+	}
+
+	free (prt);
+	return (nptr);
 }
