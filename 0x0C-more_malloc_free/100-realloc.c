@@ -1,23 +1,24 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
- * _realloc -  allocation a memory using mem block
- * @ptr: ks ks
- * @old_size: ks ks
- * @new_size: ks ks
+ * _realloc - reallocates memory using a memory block
+ * @ptr: pointer to the memory block
+ * @old_size: size of the old memory block
+ * @new_size: size of the new memory block
  *
- * Return: ksl
+ * Return: pointer to the reallocated memory block
  */
 
-void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, size_t old_size, size_t new_size)
 {
 	char *nptr;
-	unsigned int i;
+	size_t i;
 
 	if (new_size == old_size)
-		return(ptr)'
+		return (ptr);
 
 	if (ptr == NULL)
 	{
@@ -30,22 +31,23 @@ void *realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	else
 	{
-			if (new_size == 0)
-			{
-				free(ptr);
-				return (NULL);
-			}
+		if (new_size == 0)
+		{
+			free(ptr);
+			return (NULL);
+		}
 	}
 
 	nptr = malloc(new_size);
 
 	if (nptr == NULL)
-		return (NULL)
-	for (i = 0; i < old_size && i <new_sie; i++)
+		return (NULL);
+
+	for (i = 0; i < old_size && i < new_size; i++)
 	{
-		nptr(i) = ((Char *) ptr)[i];
+		nptr[i] = ((char *)ptr)[i];
 	}
 
-	free (prt);
+	free(ptr);
 	return (nptr);
 }
