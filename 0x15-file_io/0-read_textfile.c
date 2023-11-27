@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <fcnt1.h>
+#include <fcntl.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 
@@ -14,10 +14,10 @@
  *
  * Return: number of letter read and print
  */
-ssize_t read_textfile(const char *filename, size_t letters);
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_d;
-	ssize_t lens, lenw;
+	ssize_t lenr, lenw;
 	char *buffer;
 
 	if (filename == NULL)
@@ -38,7 +38,7 @@ ssize_t read_textfile(const char *filename, size_t letters);
 		free(buffer);
 		return (0);
 	}
-	lenw = write(STDOUT FILENO, buffer, lenr);
+	lenw = write(STDOUT_FILENO, buffer, lenr);
 	free(buffer);
 	if (lenr != lenw)
 		return (0);
