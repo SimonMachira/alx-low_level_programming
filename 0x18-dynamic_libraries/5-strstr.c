@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * custom_strstr - Search for the first occurrence of 'needle' in 'haystack'.
@@ -23,5 +24,5 @@ char *custom_strstr(char *haystack, char *needle)
 		return (haystack);
 	}
 
-	return (NULL);
+	return NULL;
 }

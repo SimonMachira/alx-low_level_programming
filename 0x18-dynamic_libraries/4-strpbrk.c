@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * custom_strpbrk - Search first presence of character in 'accept' in 's'.
@@ -20,5 +21,5 @@ char *custom_strpbrk(char *s, char *accept)
 	s++;
 	}
 
-	return (NULL);
+	return NULL;
 }
