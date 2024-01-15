@@ -4,7 +4,7 @@
  * custom_strcmp - Compare two strings lexicographically.
  * @s1: The first string.
  * @s2: The second string.
- * Return: The difference between the ASCII values of the first differing characters.
+ * Return: Difference from the ASCII values of first differing characters.
  */
 int custom_strcmp(char *s1, char *s2)
 {
@@ -19,5 +19,5 @@ int custom_strcmp(char *s1, char *s2)
 	i++;
 	}
 
-	return 0;
+	return (0);
 }
